@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    //Code pour faire bouger le joueur.
     public SO_players VitessePersonnage;
 
     private 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnEnnemie : MonoBehaviour
 {
+    //Code pour instancier un ennemie toutes les 2 secondes.
     public GameObject Ennemie;
 
     private float Timerspawn = 0;

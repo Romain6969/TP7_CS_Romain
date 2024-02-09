@@ -22,6 +22,4 @@ public class SO_players : ScriptableObject
 
     [SerializeField]
     public ScriptableObject Projectiles;
-
-    
 }

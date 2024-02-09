@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnnemieMouvement : MonoBehaviour
 {
+    //Code pour que l'ennemie suivent le joueur (ça ne marche pas, ça ne va  que dans une ligne droite car il n'update pas la position du joueur).
     public Enemies Ennemie;
     public SO_players Player;
     public Projectiles Projectile;
@@ -26,6 +27,7 @@ public class EnnemieMouvement : MonoBehaviour
         float Vitesse = Ennemie.Speed;
         transform.position = Vector2.MoveTowards(transform.position, ray.direction, Vitesse * Time.deltaTime);
     }
+    //Un detécteur de collision pour enlever la vie du joueur quand le joueur touche l'ennemie, l'ennemie se détruira quand il touche le joueur.
     private void OnCollisionEnter2D(Collision2D collision)
     {
         ViePlayer--;
@@ -36,6 +38,7 @@ public class EnnemieMouvement : MonoBehaviour
             Destroy(Joueur);
         }
     }
+    //Un Trigger car les projectiles sont des triggers et quand l'ennemie touche le trigger du projectile, il perdra des points de vies selons les dégats des projéctiles.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Projectile")

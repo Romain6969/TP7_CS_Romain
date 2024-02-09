@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    //Code pour définir Quand il faut trirer les projectiles.
     public Projectiles projectiles;
 
     public Rigidbody2D Rb2D;
