@@ -7,26 +7,26 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     //Code pour définir Quand il faut trirer les projectiles.
+
     public Projectiles projectiles;
 
-    public Rigidbody2D Rb2D;
-
     public GameObject Projectile;
-    public Vector2 Direction { get; set; }
 
-    void Start()
-    {
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, Direction);
-    }
     void Update()
     {
-        Rb2D.velocity = Direction * projectiles.ShotsSpeed;
         float SpeedProjectile = projectiles.ShotsSpeed;
         bool Shoot = Input.GetKeyDown(KeyCode.Mouse0);
         if (Shoot == true)
         {
+            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouseWorldPosition.z = 0;
+            Vector3 ShootDirection = mouseWorldPosition - transform.position;
+
             GameObject instantieted = Instantiate(Projectile);
             instantieted.transform.position = new Vector2(transform.position.x, transform.position.y);
+
+            MovementShooting bulletBehaviour =  instantieted.GetComponent<MovementShooting>();
+            bulletBehaviour.Direction = ShootDirection;
         }
     }
 }
