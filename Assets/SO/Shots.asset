@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 686cc123cca732747a825f0148f71397, type: 3}
+  m_Name: Shots
+  m_EditorClassIdentifier: 
+  Projectile: {fileID: 3510515774390242857, guid: 1d0659f84ec4b8c44afc80419332b3eb, type: 3}
+  FastProjectile: {fileID: 2736819581639400782, guid: 2668238a9dd3d9247a8608a0a91b1380, type: 3}
+  SlowProjectile: {fileID: 2788170795716807234, guid: b32404151c2ef1941aa563703b363514, type: 3}
+  ShotsSpeed: 5
+  ShotsDamage: 2
